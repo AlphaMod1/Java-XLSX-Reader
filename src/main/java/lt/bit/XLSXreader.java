@@ -49,20 +49,7 @@ public class XLSXreader {
 
 			while (cellIterator.hasNext()) {
 				Cell cell = cellIterator.next();
-
-				switch (cell.getCellType()) {
-				case Cell.CELL_TYPE_STRING:
-					rowList.add(cell.getStringCellValue());
-					break;
-				case Cell.CELL_TYPE_NUMERIC:
-					rowList.add(cell.getStringCellValue());
-					break;
-				case Cell.CELL_TYPE_BOOLEAN:
-					rowList.add(cell.getStringCellValue());
-					break;
-				default:
-
-				}
+				rowList.add(cell.getStringCellValue());
 			}
 			if (isHead) {
 				for (int i = 0; i < rowList.size(); i++) {
